@@ -1,0 +1,9 @@
+.filter-btn.active{
+    background-color: #fff;
+    color: #000;
+  }
+ 
+ol li:last-child span{
+  content: " ";
+  display: npne;
+} 

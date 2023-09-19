@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* for the progressbar bar at the bottom of the page */
+.one, .two, .three, .four, .five, .six{
+    width: 18px;
+    height: 8px;
+    border-radius: 12px;
+    background-color: #e6e1e1;
+  }
+  .one.active{
+    background-color: #43215D;
+  }
+ 
