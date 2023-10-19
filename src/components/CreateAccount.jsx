@@ -1,27 +1,25 @@
 import React from 'react'
 import Avatar from '../assets/images/Avatar.png'
-import AuthenSidebar from './AuthenSidebar'
-import { useNavigate } from 'react-router-dom'
+// import AuthenSidebar from './AuthenSidebar'
+// import { useNavigate } from 'react-router-dom'
 
 const CreateAccount = () => {
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
-    const handleCreateAccount = (e) => {
-        e.preventDefault();
-        if (email.value !== "" && password.value !== "") {
-        navigate('/verifyAcc');
-        }
-    };
+    // const handleCreateAccount = (e) => {
+    //     e.preventDefault();
+    //     if (email.value !== "" && password.value !== "") {
+    //     navigate('/verifyAcc');
+    //     }
+    // };
 
 
   return (
     
-    <div className='flex'>
-        <div className='basis-[25%]'>
-            <AuthenSidebar/>
-        </div>
-        <div className="basis-[75%] flex justify-center items-center">
+    <div className='flex mt-[150px]'>
+       
+        <div>
             <form action="" id="stepA" className="step-section active">
 
                 <div className='flex bg-[#5B3A89] text-xs text-[#fff] p-4 rounded-2xl absolute top-20 right-11 custom-shadow'>
@@ -50,10 +48,10 @@ const CreateAccount = () => {
                     </div>
                 </div>
 
-                <button className="w-full bg-gradient-to-r from-[#5B3A89] to-[#E43351] text-white p-2 border border-gray-300 mt-4 rounded-md"
-               onClick={ handleCreateAccount}>
+                {/* <button className="w-full bg-gradient-to-r from-[#5B3A89] to-[#E43351] text-white p-2 border border-gray-300 mt-4 rounded-md"
+                    >
                     Continue
-                </button>  
+                </button>   */}
                         
             </form>
         </div>

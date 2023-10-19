@@ -1,5 +1,5 @@
 import React from 'react'
-import pix from '../assets/images/pix.svg'
+import pix from '../../assets/images/pix.svg'
 
 function StepOne({formData, setFormData}) {
   return (

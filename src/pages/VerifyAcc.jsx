@@ -1,27 +1,22 @@
 import React from 'react'
 import Avatar from '../assets/images/Avatar.png'
-import AuthenSidebar from '../components/AuthenSidebar'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 
 const VerifyAcc = () => {
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const handleVerifyAccount = (e) => {
-      e.preventDefault();
-      if (otp.value !== "") {
-      navigate('/verifyAlert');
-      }
-  };
+  // const handleVerifyAccount = (e) => {
+  //     e.preventDefault();
+  //     if (otp.value !== "") {
+  //     navigate('/verifyAlert');
+  //     }
+  // };
 
   return (
-    <div className="flex">
+    <div className="flex mt-[150px]">
 
-        <div className='basis-[25%]'>
-            <AuthenSidebar/>
-        </div>
-
-        <div className="basis-[75%] flex justify-center items-center">
+        <div>
               <form className='w-[400px]'>
 
                 <div className='flex bg-[#5B3A89] text-xs text-[#fff] p-4 rounded-2xl absolute top-20 right-11 custom-shadow'>
@@ -42,10 +37,10 @@ const VerifyAcc = () => {
                     id="otp" placeholder="Enter OTP" required/>
                 </div>
 
-                <button className="w-full bg-gradient-to-r from-[#5B3A89] to-[#E43351] text-white p-2 border border-gray-300 mt-4 rounded-md"
+                {/* <button className="w-full bg-gradient-to-r from-[#5B3A89] to-[#E43351] text-white p-2 border border-gray-300 mt-4 rounded-md"
                 onClick={handleVerifyAccount}>
                   Continue
-                </button>  
+                </button>   */}
                       
               </form>
         </div>

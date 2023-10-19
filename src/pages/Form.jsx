@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Sidebar from '../components/Sidebar'
-import StepOne from '../components/StepOne'
-import StepTwo from '../components/StepTwo'
-import StepThree from '../components/StepThree'
-import StepFour from '../components/StepFour'
-import StepFive from '../components/StepFive'
-import StepSix from '../components/StepSix'
+import StepOne from '../components/FormSteps/StepOne'
+import StepTwo from '../components/FormSteps/StepTwo'
+import StepThree from '../components/FormSteps/StepThree'
+import StepFour from '../components/FormSteps/StepFour'
+import StepFive from '../components/FormSteps/StepFive'
+import StepSix from '../components/FormSteps/StepSix'
 // import VerifyAlert from './components/Authentication/VerifyAlert'
-import { FaHeart } from "react-icons/fa"; 
+// import { FaHeart } from "react-icons/fa"; 
 
 const Form = () => {
     const [page, setPage] = useState(0);
@@ -72,12 +72,10 @@ const Form = () => {
         } else {
             // Move to the next step for other steps
             setPage((currPage) => currPage + 1);
-           
+           // Add the current step to the completedSteps array
         }
     };
     
-   
- 
 
   return (
     <div  className="form">
@@ -88,8 +86,8 @@ const Form = () => {
             <div className="body flex">
 
                 <div className='basis-[35%] '>
-                    {/* <Sidebar FormTitles={FormTitles} page={page}/> */}
-                    <Sidebar activePage={page} />
+                    <Sidebar FormTitles={FormTitles} page={page}/>
+                    {/* <Sidebar activePage={page} /> */}
                 </div>
                 <div className='basis-[65%]'>
                     {/* Render the page content */}

@@ -1,7 +1,8 @@
 import React from 'react'
 import Tick from '../assets/images/tick.png'
-import AuthenSidebar from '../components/AuthenSidebar'
+// import AuthenSidebar from '../components/AuthenSidebar'
 import { useNavigate } from 'react-router-dom'
+
 
 const VerifyAlert = () => {
 
@@ -15,13 +16,13 @@ const VerifyAlert = () => {
   };
 
   return (
-    <div className="flex">
-
+    <div className="flex justify-center items-center h-[100vh]">
+{/* 
         <div className='basis-[25%]'>
             <AuthenSidebar/>
-        </div>
+        </div> */}
 
-        <div className="basis-[75%] flex justify-center items-center">
+        <div className="flex justify-center items-center">
             <form>
 
               <div className='text-center bg-white text-xs text-[#fff] py-12 px-20 p-4 rounded-2xl custom-shadow border border-[#5B3A89]'>

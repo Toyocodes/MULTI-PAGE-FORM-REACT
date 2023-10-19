@@ -5,5 +5,5 @@
  
 ol li:last-child span{
   content: " ";
-  display: npne;
+  display: none;
 } 

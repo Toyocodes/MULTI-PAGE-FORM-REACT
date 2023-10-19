@@ -1,5 +1,5 @@
 import React from 'react'
-import calendar from '../assets/images/calendar.png'
+import calendar from '../../assets/images/calendar.png'
 
 const Step2 = ({formData, setFormData}) => {
   return (
