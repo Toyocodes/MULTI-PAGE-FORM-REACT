@@ -9,22 +9,25 @@ const Step2 = ({formData, setFormData}) => {
           <form className='w-[400px]'>
 
               <div className="form-row">
-                  <label for="email" className="block mb-2 mt-4 text-sm">Company</label>
-                  <input type="text" value={formData.company} onChange={(event)=> setFormData({...formData, company: event.target.value})} 
+                  <label htmlFor="email" className="block mb-2 mt-4 text-sm">Company</label>
+                  <input type="text" value={formData.company} 
+                  onChange={(event)=> setFormData({...formData, company: event.target.value})} 
                   className="form-control text-sm w-[400px] p-3 border border-gray-300 rounded-md items-center" id="location" placeholder="Enter company name"/>
               </div>
 
               <div className="form-row">
-                  <label for="email" className="block mb-2 mt-4 text-sm">Job Title</label> 
-                  <textarea value={formData.jobTitle} onChange={(event)=> setFormData({...formData, jobTitle: event.target.value})} 
+                  <label htmlFor="email" className="block mb-2 mt-4 text-sm">Job Title</label> 
+                  <textarea value={formData.jobTitle} 
+                  onChange={(event)=> setFormData({...formData, jobTitle: event.target.value})} 
                   className="form-control w-full px-4 pt-4 pb-32 border border-gray-300 rounded-md resize-none" placeholder="Enter job title"></textarea>
               </div>  
 
               <div className="form-row flex space-x-4 mt-2">
                   <div>
-                      <label for="startdate" className="block mb-2 mt-4 text-sm">Start date</label> 
+                      <label htmlFor="startdate" className="block mb-2 mt-4 text-sm">Start date</label> 
                       <select type="date" name="select" id="select" 
-                      value={formData.startDate} onChange={(event)=> setFormData({...formData, startDate: event.target.value})} 
+                      value={formData.startDate} 
+                      onChange={(event)=> setFormData({...formData, startDate: event.target.value})} 
                       className="form-control text-sm w-full p-3 border border-gray-300 rounded-md items-center" placeholder="Select"> <img src={calendar} alt="" /> 
                           <option value="option1">Select</option>
                           <option value="option2">1</option>
@@ -34,9 +37,10 @@ const Step2 = ({formData, setFormData}) => {
                       </select>
                   </div>
                   <div>
-                      <label for="startdate" className="block mb-2 mt-4 text-sm">End date</label> 
+                      <label htmlFor="startdate" className="block mb-2 mt-4 text-sm">End date</label> 
                       <select type="date" name="select" id="select" 
-                      value={formData.endDate} onChange={(event)=> setFormData({...formData, endDate: event.target.value})} 
+                      value={formData.endDate} 
+                      onChange={(event)=> setFormData({...formData, endDate: event.target.value})} 
                       className="form-control text-sm w-full p-3 border border-gray-300 rounded-md items-center" placeholder="Select"> <img src={calendar} alt="" /> 
                           <option value="option1">Select</option>
                           <option value="option2">1</option>
@@ -49,7 +53,8 @@ const Step2 = ({formData, setFormData}) => {
 
               <div className="form-row flex space-x-4 mt-6">
                   <input type="checkbox" 
-                  value={formData.iCurrentlyWorkHere} onChange={(event)=> setFormData({...formData, iCurrentlyWorkHere: event.target.value})} 
+                  value={formData.iCurrentlyWorkHere} 
+                  onChange={(event)=> setFormData({...formData, iCurrentlyWorkHere: event.target.value})} 
                   className='w-6 h-6'/> <p className="text-sm">I currenty work here</p>
               </div> 
 

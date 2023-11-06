@@ -3,7 +3,7 @@ import Avatar from '../assets/images/Avatar.png'
 // import AuthenSidebar from './AuthenSidebar'
 // import { useNavigate } from 'react-router-dom'
 
-const CreateAccount = () => {
+const CreateAccount = ({formData, setFormData}) => {
 
     // const navigate = useNavigate();
 
@@ -37,13 +37,15 @@ const CreateAccount = () => {
                     
                     <div className="form-row">
                         <label htmlFor="email" className="block mb-2 mt-4 text-sm">Email Address</label>
-                        <input type="email" className="form-control text-sm w-full p-3 border border-gray-300 rounded-md items-center" 
+                        <input value={formData.email} onChange={(event)=> setFormData({...formData, email: event.target.value})}
+                         type="email" className="text-sm w-full p-3 border border-gray-300 rounded-md items-center" 
                         id="email" placeholder="Enter your email address" required/>
                     </div>
 
                     <div className="form-row">
                         <label htmlFor="psw" className="block mb-2 mt-4 text-sm">Password</label>
-                        <input type="password" className="form-control text-sm w-full p-3 border border-gray-300 rounded-md items-center" 
+                        <input value={formData.password} onChange={(event)=> setFormData({...formData, password: event.target.value})}
+                        type="password" className="form-control text-sm w-full p-3 border border-gray-300 rounded-md items-center" 
                         id="password" placeholder="Create a password" required/>
                     </div>
                 </div>

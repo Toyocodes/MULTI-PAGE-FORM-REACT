@@ -6,13 +6,19 @@ import StepThree from '../components/FormSteps/StepThree'
 import StepFour from '../components/FormSteps/StepFour'
 import StepFive from '../components/FormSteps/StepFive'
 import StepSix from '../components/FormSteps/StepSix'
-// import VerifyAlert from './components/Authentication/VerifyAlert'
-// import { FaHeart } from "react-icons/fa"; 
+import ReviewData from "../components/FormSteps/ReviewData";
+import {useNavigate} from 'react-router-dom'
+// import ReviewData from '../components/FormSteps/ReviewData';
+
 
 const Form = () => {
     const [page, setPage] = useState(0);
     //to store data in the state
     const [formData, setFormData] = useState({
+      generalInfo:{},
+      experience:[{
+
+      }],
         firstName: '',
         lastName: '',
         location: '',
@@ -57,21 +63,28 @@ const Form = () => {
           return <StepFour formData={formData} setFormData={setFormData}/>;
         } else if (page === 4) {
           return <StepFive formData={formData} setFormData={setFormData}/>;
-        } else {
+        } else if (page === 5){
           return <StepSix formData={formData} setFormData={setFormData}/>;
+        }else if (page === 6) {
+          return <ReviewData formData={formData}/>;
         }
       };
      
       
+      const navigate = useNavigate()
+
       const handleButtonClick = () => {
-        if (page === FormTitles.length - 1) {
-            alert("FORM SUBMITTED");
+        if (page === 6) {
+            alert("Form Submitted Successfully");
+            navigate("/confirm")
+            // ReviewData();
             console.log(formData) //to see all the input value.You should send this to an API if you want to have all the information viewable on your webpage. you can also style it
             // Handle the "Save and Review" action for StepSix
-            console.log("Save and Review clicked!");
+           
         } else {
             // Move to the next step for other steps
             setPage((currPage) => currPage + 1);
+            // console.log("Page switched to", page + 1)
            // Add the current step to the completedSteps array
         }
     };
@@ -80,9 +93,7 @@ const Form = () => {
   return (
     <div  className="form">
          <div className="form-container">
-            {/* <div className="header">
-                <h1>{FormTitles[page]}</h1>
-            </div> */}
+            
             <div className="body flex">
 
                 <div className='basis-[35%] '>
@@ -113,9 +124,11 @@ const Form = () => {
                             //once we click on it, it shows a popup saying form submitted
                             onClick={handleButtonClick}
                             className="w-[400px] bg-gradient-to-r from-[#5B3A89] to-[#E43351] text-white p-2 border 
-                            border-gray-300 mt-6 rounded-md"
-                        >   
-                            {page === FormTitles.length - 1 ? "Save and Review" : "Continue"}
+                            border-gray-300 mt-6 rounded-md" 
+
+                        >   {page === 5 ? "Save and Review" : 
+                            page === 6 ? "Confirm and Submit" : "Continue"}
+                            {/* {page === FormTitles.length - 1 ? "Save and Review" : "Continue"} */}
                         </button>
 
                         <div className="progressbar flex gap-3 mt-16 mb-20">

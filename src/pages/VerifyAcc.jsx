@@ -2,7 +2,7 @@ import React from 'react'
 import Avatar from '../assets/images/Avatar.png'
 // import { useNavigate } from 'react-router-dom'
 
-const VerifyAcc = () => {
+const VerifyAcc = ({formData, setFormData}) => {
 
   // const navigate = useNavigate();
 
@@ -33,7 +33,8 @@ const VerifyAcc = () => {
 
                 <div className="form-row">
                     <label htmlFor="otp" className="block mb-2 mt-6 text-sm">OTP</label>
-                    <input type="otp" className="form-control text-sm w-full p-3 border border-gray-300 rounded-md items-center" 
+                    <input value={formData.otp} onChange={(event)=> setFormData({...formData, otp: event.target.value})}
+                    type="otp" className="form-control text-sm w-full p-3 border border-gray-300 rounded-md items-center" 
                     id="otp" placeholder="Enter OTP" required/>
                 </div>
 
@@ -44,8 +45,6 @@ const VerifyAcc = () => {
                       
               </form>
         </div>
-
-         
 
     </div>
   )
